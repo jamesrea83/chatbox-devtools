@@ -1,7 +1,6 @@
-define(function(require) {
-
-    var Adapt = require('coreJS/adapt');
-    var Router = require('coreJS/router');
+define([
+    'coreJS/adapt'
+], function(Adapt) {
 
     var chatbox = Adapt.componentStore.chatbox;
     if (!chatbox) return;
@@ -19,11 +18,10 @@ define(function(require) {
  
      function toggleSpeed() {
         switchOn = !switchOn;
-        $('.toggle.chatboxSpeed label').toggleClass('selected', switchOn);
+        //$('.toggle.chatboxSpeed label').toggleClass('selected', switchOn);
         chatboxSpeed();
     }
 
     Adapt.on('devtools:chatboxSpeed', toggleSpeed);
 
-
-});
+})
