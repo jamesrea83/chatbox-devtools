@@ -22,7 +22,8 @@ define(function(require) {
                 '_toggleBankingAvailable':true,
                 '_traceFocusAvailable':true,
                 '_traceFocusEnabled':false,
-                '_extended':true
+                '_extended':true,
+                '_chatBoxSpeedEnabled': false
             }, config));
         },
 
